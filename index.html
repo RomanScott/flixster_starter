@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Flixster</title>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Roman Scott">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Browse your favorite movies from the database!">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div id="modal-popup" class="modal">
+        <div class="modal-background"></div>
+        
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title"><b>Overview</b></p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            
+            <section id="inner-modal" class="modal-card-body">
+ 
+            </section>
+        </div>
+    </div>
+
+    <section class="hero is-black">
+        <div class="hero-body">
+            <p class="title has-text-centered">
+                Flixster
+            </p>
+
+            <div class="container is-max-desktop">
+                <div class="field">
+                    <div class="control has-icons-left has-icons-right">
+                      <input id="search-input" class="input" type="text" placeholder="Search movies...">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-search"></i>
+                      </span>
+                      <div id="close-search-btn" class="icon is-small is-right" style="pointer-events: initial !important;">
+                        <i class="fas fa-times"></i>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="margin-top: 2em; margin-bottom: 2em;">
+        <div id="movies-grid" class="columns is-multiline"></div>
+    </section>
+
+    <section class="has-text-centered">
+        <button id="load-more-movies-btn" class="button is-black is-large">Load More</button>
+    </section>
+
+    <script src="./script.js" type="text/javascript"></script>
+</body>
